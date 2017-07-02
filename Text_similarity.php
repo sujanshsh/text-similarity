@@ -28,8 +28,12 @@ class Text_similarity
         $max_word_end = 0;
         $strlen = [];
         foreach ($str1 as $w1) {
+            if($w1=='')
+                continue;
             $max_word_start = $all_word_count;
             foreach ($str2 as $w2) {
+                if($w2=='')
+                    continue;
                 $matches[$all_word_count] = 0;
                 $st1 = 0;
                 $st2 = 0;
